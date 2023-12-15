@@ -1,0 +1,33 @@
+﻿<Window x:Class="Contact_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Contact_Manager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <ListBox x:Name="ContactList" HorizontalAlignment="Left" Height="169" Margin="10,0,0,0" VerticalAlignment="Center" Width="390" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF0040FF"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="33" Margin="10,333,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="108" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="33" Margin="118,333,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" Width="166" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="addContactBtn" Content="Add Contact" HorizontalAlignment="Left" Height="34" Margin="300,332,0,0" VerticalAlignment="Top" Width="158" Click="addContactBtn_Click" Background="#FF34FF69"/>
+        <Button x:Name="ModifyContactBtn" Content="Modify" HorizontalAlignment="Left" Height="29" Margin="405,133,0,0" VerticalAlignment="Top" Width="185" Click="Button_Click" Background="#FF4858CA"/>
+        <Button x:Name="DeleteContactBtn" Content="Delete" Margin="405,167,-26,217" Click="DeleteContactBtn_Click" RenderTransformOrigin="0.498,0.588">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFD41010" Offset="0.419"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ViewMore" Content="View More" HorizontalAlignment="Left" Height="30" Margin="405,200,0,0" VerticalAlignment="Top" Width="185" Click="Button_Click_1"/>
+        <Button x:Name="ImportContactCsvBtn" Content="Import Contact from .csv" HorizontalAlignment="Left" Height="40" Margin="405,10,0,0" VerticalAlignment="Top" Width="185" Click="ImportContactCsvBtn_Click"/>
+        <Button x:Name="ExportToCsvBtn" Content="Export Contact to .csv" HorizontalAlignment="Left" Height="42" Margin="405,55,0,0" VerticalAlignment="Top" Width="185" Click="ExportToCsvBtn_Click"/>
+        <Button x:Name="ResetDbBtn" Content="Reset Database" HorizontalAlignment="Left" Height="21" Margin="469,373,0,0" VerticalAlignment="Top" Width="103" Click="ResetDbBtn_Click" RenderTransformOrigin="0.534,0.611"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="29" Margin="10,302,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Phone Number" HorizontalAlignment="Left" Height="29" Margin="123,302,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Contact Manager" HorizontalAlignment="Left" Height="69" Margin="0,7,0,0" VerticalAlignment="Top" Width="369" FontSize="48"/>
+        <Label Content="Current Contact" HorizontalAlignment="Left" Height="23" Margin="10,92,0,0" VerticalAlignment="Top" Width="112"/>
+
+    </Grid>
+</Window>
